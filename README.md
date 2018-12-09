@@ -6,7 +6,7 @@ Vpubcore Node
 ### As a standalone server
 
 ```bash
-git clone https://github.com/dashevo/dashcore-node
+git clone https://github.com/vpubchain/vpubcore-node.git
 cd dashcore-node
 ./bin/dashcore-node start
 ```
