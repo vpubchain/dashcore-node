@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
-var dashcore = require('../lib/cli/dashcore');
-dashcore();
+var vpubcore = require('../lib/cli/vpubcore');
+vpubcore();

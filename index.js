@@ -6,7 +6,7 @@ module.exports.Service = require('./lib/service');
 module.exports.errors = require('./lib/errors');
 
 module.exports.services = {};
-module.exports.services.Dash = require('./lib/services/dashd');
+module.exports.services.Vpub = require('./lib/services/vpubd');
 module.exports.services.Web = require('./lib/services/web');
 
 module.exports.scaffold = {};
@@ -21,7 +21,7 @@ module.exports.scaffold.defaultConfig = require('./lib/scaffold/default-config')
 module.exports.cli = {};
 module.exports.cli.main = require('./lib/cli/main');
 module.exports.cli.daemon = require('./lib/cli/daemon');
-module.exports.cli.dashcore = require('./lib/cli/dashcore');
-module.exports.cli.dashcored = require('./lib/cli/dashcored');
+module.exports.cli.vpubcore = require('./lib/cli/vpubcore');
+module.exports.cli.vpubcored = require('./lib/cli/vpubcored');
 
-module.exports.lib = require('@dashevo/dashcore-lib');
+module.exports.lib = require('@vpubevo/vpubcore-lib');
