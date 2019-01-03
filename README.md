@@ -16,8 +16,8 @@ If it doesn't exist, it will create it, with basic task to connect to vpubd.
 
 Some plugins are available :
 
-- Insight-API : `./bin/vpubcore-node addservice @vpubevo/insight-api
-- Insight-UI : `./bin/vpubcore-node addservice @vpubevo/insight-ui`
+- Insight-API : `./bin/vpubcore-node addservice @vpubchain/insight-api`
+- Insight-UI : `./bin/vpubcore-node addservice @vpubchain/insight-ui`
 
 You also might want to add these index to your vpub.conf file :
 ```
@@ -47,7 +47,7 @@ node.on('ready', function() {
 
 ## Prerequisites
 
-- Vpub Core (vpubd) (v0.12.1.x) with support for additional indexing *(see above)*
+- Vpub Core (vpubd) (v0.1.1) with support for additional indexing *(see above)*
 - Node.js v0.10, v0.12, v4 or v5
 - ZeroMQ *(libzmq3-dev for Ubuntu/Debian or zeromq on OSX)*
 - ~20GB of disk storage
@@ -67,37 +67,24 @@ vpubcore-node start
 
 This will create a directory with configuration files for your node and install the necessary dependencies.
 
-Please note that [Vpub Core](https://github.com/vpubpay/vpub/tree/master) needs to be installed first.
-
-For more information about (and developing) services, please see the [Service Documentation](docs/services.md).
+Please note that [Vpub Core](https://github.com/vpubchain/vpub) needs to be installed first.
 
 ## Add-on Services
 
 There are several add-on services available to extend the functionality of Bitcore:
 
-- [Insight API](https://github.com/vpubevo/insight-api/tree/master)
-- [Insight UI](https://github.com/vpubevo/insight-ui/tree/master)
-- [Bitcore Wallet Service](https://github.com/vpubevo/vpubcore-wallet-service/tree/master)
+- [Insight API](https://github.com/vpubchain/insight-api/tree/master)
+- [Insight UI](https://github.com/vpubchain/insight-ui/tree/master)
 
-## Documentation
-
-- [Upgrade Notes](docs/upgrade.md)
-- [Services](docs/services.md)
-  - [Vpubd](docs/services/vpubd.md) - Interface to Vpub Core
-  - [Web](docs/services/web.md) - Creates an express application over which services can expose their web/API content
-- [Development Environment](docs/development.md) - Guide for setting up a development environment
-- [Node](docs/node.md) - Details on the node constructor
-- [Bus](docs/bus.md) - Overview of the event bus constructor
-- [Release Process](docs/release.md) - Information about verifying a release and the release process.
 
 
 ## Setting up dev environment (with Insight)
 
 Prerequisite : Having a vpubd node already runing `vpubd --daemon`.
 
-Vpubcore-node : `git clone https://github.com/vpubevo/vpubcore-node -b develop`
-Insight-api (optional) : `git clone https://github.com/vpubevo/insight-api -b develop`
-Insight-UI (optional) : `git clone https://github.com/vpubevo/insight-ui -b develop`
+Vpubcore-node : `git clone https://github.com/vpubchain/vpubcore-node`
+Insight-api (optional) : `git clone https://github.com/vpubchain/insight-api`
+Insight-UI (optional) : `git clone https://github.com/vpubchain/insight-ui`
 
 Install them :
 ```
@@ -113,11 +100,8 @@ npm link ../insight-ui
 ```
 
 Start with `./bin/vpubcore-node start` to first generate a ~/.vpubcore/vpubcore-node.json file.
-Append this file with `"@vpubevo/insight-ui"` and `"@vpubevo/insight-api"` in the services array.
+Append this file with `"@vpubchain/insight-ui"` and `"@vpubchain/insight-api"` in the services array.
 
-## Contributing
-
-Please send pull requests for bug fixes, code optimization, and ideas for improvement. For more information on how to contribute, please refer to our [CONTRIBUTING](https://github.com/vpubevo/vpubcore/blob/master/CONTRIBUTING.md) file.
 
 ## License
 

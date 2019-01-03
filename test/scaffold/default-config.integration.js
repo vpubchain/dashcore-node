@@ -59,8 +59,8 @@ describe('#defaultConfig', function() {
       services: [
         'vpubd',
         'web',
-        '@vpubevo/insight-api',
-        '@vpubevo/insight-ui'
+        '@vpubchain/insight-api',
+        '@vpubchain/insight-ui'
       ],
       servicesConfig: {
         vpubd: {
