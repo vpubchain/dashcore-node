@@ -20,7 +20,7 @@ describe('#defaultConfig', function() {
         vpubd: {
           connect: [{
             rpchost: '127.0.0.1',
-            rpcport: 9902,
+            rpcport: 11772,
             rpcuser: 'mn',
             rpcpassword: '999000',
             zmqpubrawtx: 'tcp://127.0.0.1:28332'
@@ -59,14 +59,14 @@ describe('#defaultConfig', function() {
       services: [
         'vpubd',
         'web',
-        '@vpubchain/insight-api',
-        '@vpubchain/insight-ui'
+        '@vpubevo/insight-api',
+        '@vpubevo/insight-ui'
       ],
       servicesConfig: {
         vpubd: {
           connect: [{
             rpchost: '127.0.0.1',
-            rpcport: 9902,
+            rpcport: 11772,
             rpcuser: 'mn',
             rpcpassword: '999000',
             zmqpubrawtx: 'tcp://127.0.0.1:28332'

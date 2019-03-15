@@ -16,8 +16,8 @@ If it doesn't exist, it will create it, with basic task to connect to vpubd.
 
 Some plugins are available :
 
-- Insight-API : `./bin/vpubcore-node addservice @vpubchain/insight-api`
-- Insight-UI : `./bin/vpubcore-node addservice @vpubchain/insight-ui`
+- Insight-API : `./bin/vpubcore-node addservice @vpubevo/insight-api`
+- Insight-UI : `./bin/vpubcore-node addservice @vpubevo/insight-ui`
 
 You also might want to add these index to your vpub.conf file :
 ```
@@ -100,7 +100,7 @@ npm link ../insight-ui
 ```
 
 Start with `./bin/vpubcore-node start` to first generate a ~/.vpub/vpubcore-node.json file.
-Append this file with `"@vpubchain/insight-ui"` and `"@vpubchain/insight-api"` in the services array.
+Append this file with `"@vpubevo/insight-ui"` and `"@vpubevo/insight-api"` in the services array.
 
 
 ## License
