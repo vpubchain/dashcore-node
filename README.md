@@ -11,7 +11,7 @@ cd vpubcore-node
 ./bin/vpubcore-node start
 ```
 
-When running the start command, it will seek for a .vpubcore folder with a vpubcore-node.json conf file.
+When running the start command, it will seek for a .vpub folder with a vpubcore-node.json conf file.
 If it doesn't exist, it will create it, with basic task to connect to vpubd.
 
 Some plugins are available :
@@ -99,7 +99,7 @@ npm link ../insight-api
 npm link ../insight-ui
 ```
 
-Start with `./bin/vpubcore-node start` to first generate a ~/.vpubcore/vpubcore-node.json file.
+Start with `./bin/vpubcore-node start` to first generate a ~/.vpub/vpubcore-node.json file.
 Append this file with `"@vpubchain/insight-ui"` and `"@vpubchain/insight-api"` in the services array.
 
 

@@ -6,7 +6,7 @@ var sinon = require('sinon');
 var proxyquire = require('proxyquire');
 
 describe('#defaultConfig', function() {
-  var expectedExecPath = path.resolve(__dirname, process.env.HOME, './.vpubcore/data/vpubd');
+  var expectedExecPath = path.resolve(__dirname, process.env.HOME, './.vpub/data/vpubd');
 
   it('will return expected configuration', function() {
     var config = JSON.stringify({
@@ -32,7 +32,7 @@ describe('#defaultConfig', function() {
       fs: {
         existsSync: sinon.stub().returns(false),
         writeFileSync: function(path, data) {
-          path.should.equal(process.env.HOME + '/.vpubcore/vpubcore-node.json');
+          path.should.equal(process.env.HOME + '/.vpub/vpubcore-node.json');
           data.should.equal(config);
         },
         readFileSync: function() {
@@ -45,7 +45,7 @@ describe('#defaultConfig', function() {
     });
     var home = process.env.HOME;
     var info = defaultConfig();
-    info.path.should.equal(home + '/.vpubcore');
+    info.path.should.equal(home + '/.vpub');
     info.config.network.should.equal('livenet');
     info.config.port.should.equal(3001);
     info.config.services.should.deep.equal(['vpubd', 'web']);
@@ -78,7 +78,7 @@ describe('#defaultConfig', function() {
       fs: {
         existsSync: sinon.stub().returns(false),
         writeFileSync: function(path, data) {
-          path.should.equal(process.env.HOME + '/.vpubcore/vpubcore-node.json');
+          path.should.equal(process.env.HOME + '/.vpub/vpubcore-node.json');
           data.should.equal(config);
         },
         readFileSync: function() {
@@ -93,7 +93,7 @@ describe('#defaultConfig', function() {
     var info = defaultConfig({
       additionalServices: ['insight-api', 'insight-ui']
     });
-    info.path.should.equal(home + '/.vpubcore');
+    info.path.should.equal(home + '/.vpub');
     info.config.network.should.equal('livenet');
     info.config.port.should.equal(3001);
     info.config.services.should.deep.equal([

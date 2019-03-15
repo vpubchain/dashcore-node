@@ -46,7 +46,7 @@ describe('Vpubd Functionality', function() {
       vpubd = require('../').services.Vpub({
         spawn: {
           datadir: datadir,
-          exec: path.resolve(__dirname, process.env.HOME, './.vpubcore/data/vpubd')
+          exec: path.resolve(__dirname, process.env.HOME, './.vpub/data/vpubd')
         },
         node: {
           network: regtestNetwork,

@@ -53,7 +53,7 @@ describe('Node Functionality', function() {
             config: {
               spawn: {
                 datadir: datadir,
-                exec: path.resolve(__dirname, process.env.HOME, './.vpubcore/data/vpubd')
+                exec: path.resolve(__dirname, process.env.HOME, './.vpub/data/vpubd')
               }
             }
           }

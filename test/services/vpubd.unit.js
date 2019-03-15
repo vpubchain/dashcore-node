@@ -422,7 +422,7 @@ describe('Vpub Service', function() {
       var config = {
         node: {
           network: vpubcore.Networks.testnet,
-          configPath: '/tmp/.vpubcore/vpubcore-node.json'
+          configPath: '/tmp/.vpub/vpubcore-node.json'
         },
         spawn: {
           datadir: './data',
@@ -433,7 +433,7 @@ describe('Vpub Service', function() {
       vpubd.options.spawn.datadir = './data';
       var node = {};
       vpubd._loadSpawnConfiguration(node);
-      vpubd.options.spawn.datadir.should.equal('/tmp/.vpubcore/data');
+      vpubd.options.spawn.datadir.should.equal('/tmp/.vpub/data');
     });
     it('should throw an exception if txindex isn\'t enabled in the configuration', function() {
       var TestVpub = proxyquire('../../lib/services/vpubd', {

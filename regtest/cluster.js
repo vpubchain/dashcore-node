@@ -19,7 +19,7 @@ var VpubService = index.services.Vpub;
 describe('Vpub Cluster', function() {
   var node;
   var daemons = [];
-  var execPath = path.resolve(__dirname, process.env.HOME, './.vpubcore/data/vpubd')
+  var execPath = path.resolve(__dirname, process.env.HOME, './.vpub/data/vpubd')
   var nodesConf = [
     {
       datadir: path.resolve(__dirname, './data/node1'),
