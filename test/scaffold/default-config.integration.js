@@ -14,7 +14,9 @@ describe('#defaultConfig', function() {
       port: 3001,
       services: [
         'vpubd',
-        'web'
+        'web',
+        '@vpubevo/insight-api',
+        '@vpubevo/insight-ui'
       ],
       servicesConfig: {
         vpubd: {
