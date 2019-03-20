@@ -11,7 +11,7 @@ describe('#defaultConfig', function() {
   it('will return expected configuration', function() {
     var config = JSON.stringify({
       network: 'livenet',
-      port: 3001,
+      port: 3002,
       services: [
         'vpubd',
         'web',
@@ -23,8 +23,8 @@ describe('#defaultConfig', function() {
           connect: [{
             rpchost: '127.0.0.1',
             rpcport: 11772,
-            rpcuser: 'mn',
-            rpcpassword: '999000',
+            rpcuser: 'rpcuser',
+            rpcpassword: '123456',
             zmqpubrawtx: 'tcp://127.0.0.1:28332'
            }]
         }
@@ -49,7 +49,7 @@ describe('#defaultConfig', function() {
     var info = defaultConfig();
     info.path.should.equal(home + '/.vpub');
     info.config.network.should.equal('livenet');
-    info.config.port.should.equal(3001);
+    info.config.port.should.equal(3002);
     info.config.services.should.deep.equal(['vpubd', 'web']);
     var vpubd = info.config.servicesConfig.vpubd;
     should.exist(vpubd);
@@ -57,7 +57,7 @@ describe('#defaultConfig', function() {
   it('will include additional services', function() {
     var config = JSON.stringify({
       network: 'livenet',
-      port: 3001,
+      port: 3002,
       services: [
         'vpubd',
         'web',
@@ -69,8 +69,8 @@ describe('#defaultConfig', function() {
           connect: [{
             rpchost: '127.0.0.1',
             rpcport: 11772,
-            rpcuser: 'mn',
-            rpcpassword: '999000',
+            rpcuser: 'rpcuser',
+            rpcpassword: '123456',
             zmqpubrawtx: 'tcp://127.0.0.1:28332'
           }]
         }
@@ -97,7 +97,7 @@ describe('#defaultConfig', function() {
     });
     info.path.should.equal(home + '/.vpub');
     info.config.network.should.equal('livenet');
-    info.config.port.should.equal(3001);
+    info.config.port.should.equal(3002);
     info.config.services.should.deep.equal([
       'vpubd',
       'web',

@@ -26,7 +26,7 @@ You can run the web service over https by editing your bitcore node config, sett
 
 ```json
 {
-  "port": 3001,
+  "port": 3002,
   "https": true,
   "httpsOptions": {
     "key": "path-to-private-key",

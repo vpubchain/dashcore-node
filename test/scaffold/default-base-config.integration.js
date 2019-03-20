@@ -11,7 +11,7 @@ describe('#defaultBaseConfig', function() {
     var info = defaultBaseConfig();
     info.path.should.equal(cwd);
     info.config.network.should.equal('livenet');
-    info.config.port.should.equal(3001);
+    info.config.port.should.equal(3002);
     info.config.services.should.deep.equal(['vpubd', 'web']);
     var vpubd = info.config.servicesConfig.vpubd;
     vpubd.spawn.datadir.should.equal(home + '/.vpub');

@@ -57,7 +57,7 @@ var myNode = new bitcore.Node({
       name: 'web',
       module: Web,
       config: {
-        port: 3001
+        port: 3002
       }
     }
   ]

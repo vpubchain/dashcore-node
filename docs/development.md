@@ -110,7 +110,7 @@ Edit `bitcore-node-vpub.json` with something similar to:
 ```json
 {
   "network": "livenet",
-  "port": 3001,
+  "port": 3002,
   "services": [
     "bitcoind",
     "web",
